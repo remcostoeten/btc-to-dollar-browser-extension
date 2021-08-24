@@ -1,0 +1,7 @@
+html body {
+    background: red;
+}
+
+html {
+    display: none !important;
+}
