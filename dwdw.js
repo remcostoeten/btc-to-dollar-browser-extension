@@ -1,18 +1,13 @@
 (function () {
     function textBox() {
-        var content = document.querySelector('.tpsl-modal__tips-desc')
-        var scrapedBTCValue = content.textContent.match(/[0-9].[0-9]{8}/);
-        var btcValue = scrapedBTCValue[0];
-
-        var box = document.createElement("div");
-        box.classList = "btc-dollar-wrapper wrapper";
-        box.innerHTML = btcValue + " = x dollar";
-        document.querySelector(".test-container").appendChild(box);
-
-        console.log(btcValue);
+        var box = document.createElement("span");
+        textBox.value = "Search Mathemafia";
+        textBox.id = "btc-dollar-converter-box";
+        textBox.type = "submit";
+        textBox.innerHTML = "dit is een test";
+        document.querySelector(".cd__main").appendChild(box);
     }
 
     textBox();
 })();
 
-alert('test');
