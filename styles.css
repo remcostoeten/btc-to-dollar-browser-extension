@@ -1,7 +1,4 @@
-html body {
-    background: red;
-}
-
-html {
-    display: none !important;
+.btc-dollar-wrapper .wrapper {
+    background: green;
+    color: white;
 }

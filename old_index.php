@@ -1,50 +1,41 @@
 <!DOCTYPE html>
 <html>
 <body>
-<div class="calculator">
-<div class="calculator__inner">
-    <input type="number" name="btc" class="currencyField" placeholder="BTC">
-    <div class="arrow" style="margin: 0 10px";>=</div>
-    <input type="number" name="usd" class="currencyField" placeholder="USD">
-</div>
+
+<div class="test">
+    <td>0.00036772</td>
 </div>
 
 
-<script>
-    $(".currencyField").keyup(function(){ //input[name='calc']
-        let convFrom;
-        if($(this).prop("name") == "btc") {
-            convFrom = "btc";
-            convTo = "usd";
-        }
-        else {
-            convFrom = "usd";
-            convTo = "btc";
-        }
-        $.getJSON( "https://api.coindesk.com/v1/bpi/currentprice/usd.json",
-            function( data) {
-                var origAmount = parseFloat($("input[name='" + convFrom + "']").val());
-                var exchangeRate = parseInt(data.bpi.USD.rate_float);
-                let amount;
-                if(convFrom == "btc")
-                    amount = parseFloat(origAmount * exchangeRate);
-                else
-                    amount = parseFloat(origAmount/ exchangeRate);
-                $("input[name='" + convTo + "']").val(amount.toFixed(2));
-            });
-    });
-</script>
+<tr data-row-key="58514024" class="ant-table-row ant-table-row-level-0">
+    <td class="ant-table-cell">BTCUSD</td>
+    <td class="ant-table-cell">Close Short</td>
+    <td class="ant-table-cell">1200</td>
+    <td class="ant-table-cell">49,695.0</td>
+    <td class="ant-table-cell">50,462.0</td>
+    <td class="ant-table-cell"><span style="color: rgb(247, 73, 123);">-0.00036772</span></td>
+    <td class="ant-table-cell">Trade</td>
+    <td class="ant-table-cell">2021-09-03 12:42:19</td>
+</tr>
+<div class="test-container"></div>
+<script language="JavaScript" type="text/javascript" src="init.js"></script>
+
+</body>
+
+</html>
 
 <style>
-    .calculator{
-        display:flex;
-        margin-top: 50px;
-        justify-content: center;
+    html {
+        background: lightgrey;
     }
 
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
+    .wrapper {
+        padding: 10px;
+        border-radius: 4px;
+        background-color: darkslategray;
+        font-size: 12px;
+        margin-bottom: 20px;
+        width: fit-content;
+        color: white;
     }
 </style>
