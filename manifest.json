@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "js": ["init.js"],
-      "matches": ["<all_urls>"],
+      "matches": ["https://www.bybit.com/user/assets/order/closed-pnl/inverse"],
       "css": ["main.css"]
     }
   ]

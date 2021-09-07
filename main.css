@@ -10,3 +10,11 @@ th.ant-table-cell:last-child:after {
     position: absolute;
     right: -140px;
 }
+
+.ant-table-tbody .negative {
+    color: rgb(247, 73, 123);
+}
+
+.ant-table-tbody .positive {
+    color: rgb(130, 199, 73);
+}

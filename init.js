@@ -13,6 +13,12 @@ function convertBtcToUsd(row) {
     box.classList.add('wrapper');
     box.textContent = scrapedBTCValue + ' = ' + amount.toFixed(2) + '$';
 
+    if (amount < 0) {
+        box.classList.add('negative');
+    } else {
+        box.classList.add('positive');
+    }
+
     row.appendChild(box);
     console.log(amount.toFixed(4));
 }
