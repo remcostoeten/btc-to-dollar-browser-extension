@@ -2,3 +2,7 @@
     background: green;
     color: white;
 }
+
+.ant-table-tbody .negative td {
+    color: yellow;
+}
