@@ -1,11 +1,12 @@
-html {
-    background: lightgrey;
+.btc-dollar-wrapper {
+    font-size: 14px;
+    color: #101014;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.btc-dollar-wrapper {
-    padding: 10px;
-    border-radius: 4px;
-    background-color: green;
-    font-size: 12px;
-    color: white;
+th.ant-table-cell:last-child:after {
+    content: "Winst/verlies BTC/USD";
+    position: absolute;
+    right: -140px;
 }
