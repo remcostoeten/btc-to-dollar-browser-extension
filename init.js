@@ -1,22 +1,49 @@
-$(document).ready(function () {
-    textBox();
+let exchangeRateLoaded = false;
+let exchangeRate = 1;
 
-    function textBox() {
-        $.getJSON("https://api.coindesk.com/v1/bpi/currentprice/usd.json",
-            function (data) {
-                $('tr.ant-table-row').each(function () {
-                    var scrapedBTCValue = $(this).find('.ant-table-cell span').text();
-                    var btcValue = scrapedBTCValue;
-                    var box = document.createElement("div");
-                    var amountInBtc = scrapedBTCValue; //convert 0.005 btc to usd
-                    var exchangeRate = parseInt(data.bpi.USD.rate_float);
-                    var amount = amountInBtc * exchangeRate;
-                    box.id = "dollar-box";
-                    box.classList = "btc-dollar-wrapper wrapper";
-                    box.innerHTML = scrapedBTCValue + " = " + amount.toFixed(2) + "$";
-                    $(this).append(box);
-                    console.log(amount.toFixed(4));
-                });
-            });
-    }
+//function to convert currency on individual rows, triggered by MutationObserver and after exchange rate is fetched.
+function convertBtcToUsd(row) {
+    const scrapedBTCValue = row.querySelector('.ant-table-cell span').textContent;
+    const box = document.createElement('div');
+    const amountInBtc = scrapedBTCValue;
+    const amount = amountInBtc * exchangeRate;
+
+    box.setAttribute('id', 'dollar-box');
+    box.classList.add('btc-dollar-wrapper')
+    box.classList.add('wrapper');
+    box.textContent = scrapedBTCValue + ' = ' + amount.toFixed(2) + '$';
+
+    row.appendChild(box);
+    console.log(amount.toFixed(4));
+}
+
+//create observer that triggers convert code when new rows are added
+const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((addedNode) => {
+            if(exchangeRateLoaded && addedNode.nodeName === 'TR' && addedNode.classList.contains('ant-table-row')) {
+                convertBtcToUsd(addedNode);
+            }
+        });
+    });
 });
+
+observer.observe(document, {
+    subtree: true, //watch all elements in document recursively
+    childList: true, //trigger observer when elements are added or removed.
+})
+
+//load exchange rate from Coindesk API
+fetch('https://api.coindesk.com/v1/bpi/currentprice/usd.json').then((response) => {
+    if(response.status != 200) {
+        console.error('Coindesk API returned non-success code')
+        console.log(response);
+        return;
+    }
+
+    response.json().then((data) => {
+        exchangeRate = parseFloat(data.bpi.USD.rate_float);
+        exchangeRateLoaded = true;
+        document.querySelectorAll('tr.ant-table-row').forEach((row) => convertBtcToUsd(row)) //convert already loaded rows now that we know the exchange rate
+    })
+})

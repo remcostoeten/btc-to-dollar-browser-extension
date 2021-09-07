@@ -11,7 +11,7 @@
   },
   "content_scripts": [
     {
-      "js": [ "jquery.min.js","init.js"],
+      "js": ["init.js"],
       "matches": ["<all_urls>"],
       "css": ["main.css"]
     }
