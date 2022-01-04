@@ -53,3 +53,12 @@ fetch('https://api.coindesk.com/v1/bpi/currentprice/usd.json').then((response) =
         document.querySelectorAll('tr.ant-table-row').forEach((row) => convertBtcToUsd(row)) //convert already loaded rows now that we know the exchange rate
     })
 })
+
+var checkExist = setInterval(function() {
+    if (document.querySelector('#modal-root .tpsl-modal__tips-desc') != null) {
+        if ( document.querySelector('#modal-root .tpsl-modal__tips-desc').innerHTML.length ) {
+            console.log( "Exists!" );
+            clearInterval( checkExist );
+        }
+    }
+}, 100); // check every 100ms
