@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "js": ["init.js"],
-      "matches": ["https://www.bybit.com/user/assets/order/closed-pnl/inverse"],
+      "matches": ["https://testnet.bybit.com/trade/inverse/BTCUSD"],
       "css": ["main.css"]
     }
   ]

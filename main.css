@@ -18,3 +18,14 @@ th.ant-table-cell:last-child:after {
 .ant-table-tbody .positive {
     color: rgb(130, 199, 73);
 }
+
+.btc-to-dollar-box {
+    background-color: #ffb11a;
+    color: black;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 10px;
+    margin-top: 16px;
+    line-height: 12px;
+}

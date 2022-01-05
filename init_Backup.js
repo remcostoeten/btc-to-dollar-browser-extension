@@ -2,12 +2,16 @@ let exchangeRateLoaded = false;
 let exchangeRate = 1;
 
 
-// document.getElementsByClassName('trade-assets__head-title')[0].style.color = "red";
+function hardCoded(rowtwo) {
+    const classSelector = rowtwo.querySelector('ant-tabs-nav-wrap');
+    const boxSelector = document.createElement('div');
+    const amountDollars = '25';
+    const amounttwo = amountDollars + 1;
 
-// var strong = document.createElement('strong');
-// strong.innerHTML = 'testtest';
-// document.getElementsByClassName('trade-assets__head-title')[0].appendChild(strong);
-
+    boxSelector.setAttribute('id', 'test-box');
+    boxSelector.classList.add('testclass'); 
+    rowtwo.appendChild(boxSelector);
+}
 
 //function to convert currency on individual rows, triggered by MutationObserver and after exchange rate is fetched.
 function convertBtcToUsd(row) {
@@ -68,16 +72,11 @@ var checkExist = setInterval(function() {
             console.log( "Exists!" );
             document.getElementById("modal-root").className = "remco"
 
-            var extraBox = document.createElement('div');
-            extraBox.innerHTML = 'testtest';
-            extraBox.classList.add('btc-to-dollar-box');
-            document.getElementsByClassName('tpsl-modal__tips-desc')[0].appendChild(extraBox);
-
             clearInterval( checkExist );
         }
     }
 }, 100); // check every 100ms
 
-// document.getElementById("rc-tabs-0-tab-inverse").style.color = "red";
-
-
+const invers = document.createElement('div');
+invers.classList.add('btc-dollar-wrapper')
+invers.textContent += "This just got added";
