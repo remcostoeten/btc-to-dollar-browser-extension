@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "js": ["init.js"],
-      "matches": ["https://testnet.bybit.com/trade/inverse/BTCUSD"],
+      "matches": ["*://*/*"],
       "css": ["main.css"]
     }
   ]
