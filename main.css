@@ -25,7 +25,7 @@ th.ant-table-cell:last-child:after {
     font-weight: bold;
     border-radius: 4px;
     padding: 12px;
-    font-size: 10px;
+    font-size: 16px;
     margin-top: 16px;
     line-height: 12px;
 }
