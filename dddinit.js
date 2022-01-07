@@ -1,6 +1,14 @@
 let exchangeRateLoaded = false;
 let exchangeRate = 1;
 
+
+// document.getElementsByClassName('trade-assets__head-title')[0].style.color = "red";
+
+// var strong = document.createElement('strong');
+// strong.innerHTML = 'testtest';
+// document.getElementsByClassName('trade-assets__head-title')[0].appendChild(strong);
+
+
 //function to convert currency on individual rows, triggered by MutationObserver and after exchange rate is fetched.
 function convertBtcToUsd(row) {
     const scrapedBTCValue = row.querySelector('.ant-table-cell span').textContent;
@@ -57,17 +65,8 @@ fetch('https://api.coindesk.com/v1/bpi/currentprice/usd.json').then((response) =
 var checkExist = setInterval(function() {
     if (document.querySelector('#modal-root .tpsl-modal__tips-desc') != null) {
         if ( document.querySelector('#modal-root .tpsl-modal__tips-desc').innerHTML.length ) {
-
-            const scrapedBTCValueTwo = querySelector('.oc__row-desc').textContent;
-
-
-            function convertBtcToUsd() {
-                const scrapedBTCValue = querySelector('.oc__row-desc .oc__row-bottom--16 .tpsl-modal__tips-desc').textContent;
-                // const box = document.createElement('div');
-                // const amountInBtc = scrapedBTCValue;
-                // const amount = amountInBtc * exchangeRate;
-            }
-            
+            console.log( "Exists!" );
+            document.getElementById("modal-root").className = "remco"
 
             var extraBox = document.createElement('div');
             extraBox.innerHTML = 'testtest';
@@ -80,5 +79,3 @@ var checkExist = setInterval(function() {
 }, 100); // check every 100ms
 
 // document.getElementById("rc-tabs-0-tab-inverse").style.color = "red";
-
-

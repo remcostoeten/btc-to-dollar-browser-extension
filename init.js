@@ -63,13 +63,21 @@ fetch('https://api.coindesk.com/v1/bpi/currentprice/usd.json').then((response) =
 })
 
 var checkExist = setInterval(function() {
+    
+    var btcScraped = Number.parseFloat(document.querySelector('#modal-root .tpsl-modal__tips-desc').innerText.match(/[0-9,.]+\sBTC/)[0].split(/\s/)[0])  //  Scrape btc value from class 
+
     if (document.querySelector('#modal-root .tpsl-modal__tips-desc') != null) {
         if ( document.querySelector('#modal-root .tpsl-modal__tips-desc').innerHTML.length ) {
             console.log( "Exists!" );
             document.getElementById("modal-root").className = "remco"
 
+            var testTest = "test123"
+
+            var testBox = document.createElement('div');
+            testBox.innerHTML = "test123";
+
             var extraBox = document.createElement('div');
-            extraBox.innerHTML = 'testtest';
+            extraBox.innerHTML = btcScraped + "BTC = " ;
             extraBox.classList.add('btc-to-dollar-box');
             document.getElementsByClassName('tpsl-modal__tips-desc')[0].appendChild(extraBox);
 
@@ -79,5 +87,3 @@ var checkExist = setInterval(function() {
 }, 100); // check every 100ms
 
 // document.getElementById("rc-tabs-0-tab-inverse").style.color = "red";
-
-

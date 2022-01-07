@@ -1,1 +1,1 @@
-Browser extension that converts btc to usd on bybit.
+<p class="oc__row-desc oc__row-bottom--16 tpsl-modal__tips-desc">Last Traded Priceto 47,800.0 will trigger market Take Profit order; your expected loss will be 0.01429782 BTC&nbsp;&nbsp;ROI:-1.93%</p>
