@@ -1,1 +1,3 @@
-<p class="oc__row-desc oc__row-bottom--16 tpsl-modal__tips-desc">Last Traded Priceto 47,800.0 will trigger market Take Profit order; your expected loss will be 0.01429782 BTC&nbsp;&nbsp;ROI:-1.93%</p>
+A extensions whichs scrapes the BTC Value from certain pages on ByBit and converts them to real time dollar value. Currently working on the `Closed P&L` page: https://www.bybit.com/user/assets/order/closed-pnl/inverse. And the modal popup when you're in a long/short and hit the `TP/SL` button and fill in a target. It will create a new line with the scraped bitcoin value and converts it to dollars. 
+
+Still far from perfect and full of bugs.

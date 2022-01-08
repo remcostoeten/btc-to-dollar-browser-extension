@@ -29,3 +29,11 @@ th.ant-table-cell:last-child:after {
     margin-top: 16px;
     line-height: 12px;
 }
+
+.dialog-overflow-scroll {
+    max-height: unset !important;
+}
+
+.dialog-overflow-scroll .scrollbar-dark {
+    max-height: unset !important;
+}

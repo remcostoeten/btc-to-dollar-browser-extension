@@ -1,14 +1,6 @@
 let exchangeRateLoaded = false;
 let exchangeRate = 1;
 
-
-// document.getElementsByClassName('trade-assets__head-title')[0].style.color = "red";
-
-// var strong = document.createElement('strong');
-// strong.innerHTML = 'testtest';
-// document.getElementsByClassName('trade-assets__head-title')[0].appendChild(strong);
-
-
 // function for PNL page to convert currency on individual rows, triggered by MutationObserver and after exchange rate is fetched.
 function convertBtcToUsd(row) {
     const scrapedBTCValue = row.querySelector('.ant-table-cell span').textContent;

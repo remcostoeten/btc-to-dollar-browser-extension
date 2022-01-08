@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://www.bybit.com/trade/inverse/static/css/main.92625fed.chunk.css">
+    <link rel="stylesheet" href="https://www.bybit.com/trade/inverse/static/css/2.74327a62.chunk.css">
+</head>
+
+<body>
+
+    <style>
+        th.ant-table-cell:last-child:after {
+            content: "Winst/verlies BTC/USD";
+            position: absolute;
+            right: -140px;
+        }
+
+        .ant-table-tbody .negative td {
+            color: yellow;
+        }
+    </style>
+    <div id="modal-root">
+        <div class="by-modal show-darkModal">
+            <div class="by-modal__container by-dialog position-profit-modal dialog-overflow-scroll-wrap react-draggable"
+                style="transform: translate(-50%, -50%) translate(0px, 0px);">
+                <div class="by-dialog__head semi-bold f-16">TP/SL<span
+                        class="by-dialog__close regular f-12 gc-04 brand-hover icon iconfont icon-close"></span></div>
+                <div class="by-dialog__body gc-07">
+                    <div class="dialog-overflow-scroll scrollbar-dark">
+                        <div>
+                            <div class="take-profit__row oc__row">
+                                <div>Entry Price</div>
+                                <div>47707.50</div>
+                            </div>
+                            <div class="take-profit__row oc__row">
+                                <div>Liq. Price</div>
+                                <div class="take-profit__head-liq-price">54644.50</div>
+                            </div>
+                        </div>
+                        <div class="oc__row-bottom--12">
+                            <div class="oc__row-field flex space-between">
+                                <div class="by-popover">
+                                    <div class="by-popover__el"><span class="tpsl-modal-item__title">Take Profit
+                                            USD</span></div>
+                                </div>
+                                <div class="by-select profit-select by-select--medium">
+                                    <div class="by-popover">
+                                        <div class="by-popover__el">
+                                            <div
+                                                class="by-input by-select__input by-input--readonly by-input--medium txt-align--right">
+                                                <div class="by-input__container"><span
+                                                        class="by-input__wrapper flex"><input class="by-input__inner"
+                                                            readonly="" type="text"
+                                                            value="Last Traded Price"></span><span
+                                                        class="by-input__right-icon"><span
+                                                            class="icon iconfont icon-xia f-8 by-select__icon brand-hover"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="oc__row">
+                                <div
+                                    class="by-input by-input-number oc__row-item flex1 mw-136 profit-input profit-input-wrap by-input--gc-1 by-input--outlined by-input--xxx-large">
+                                    <div class="by-input__container"><span class="by-input__wrapper flex"><input
+                                                class="by-input__inner" type="text" value="47100"></span><span
+                                            class="by-input__right-icon">
+                                            <div class="profit-input-icons"><span
+                                                    class="profit-input-icon-clear icon-clear iconfont"></span><span
+                                                    class="profit-input-icon">－</span><span
+                                                    class="profit-input-icon profit-input__border-left">＋</span></div>
+                                        </span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="by-switch flex full oc__row-bottom--12 by-switch--medium by-switch--contained by-switch--gc-4">
+                            <div class="by-switch__item">25%</div>
+                            <div class="by-switch__item">50%</div>
+                            <div class="by-switch__item">75%</div>
+                            <div class="by-switch__item">100%</div>
+                            <div class="by-switch__item">150%</div>
+                        </div>
+                        <p class="oc__row-desc oc__row-bottom--16 tpsl-modal__tips-desc">Last Traded Priceto 47,100.0
+                            will trigger market Take Profit order; your expected profit will be 0.09529758
+                            BTC&nbsp;&nbsp;ROI:12.89%</p>
+                        <div class="tpsl-modal__hr-line oc__row-bottom--16"></div>
+                        <div class="oc__row-bottom--12">
+                            <div class="oc__row-field flex space-between">
+                                <div class="by-popover">
+                                    <div class="by-popover__el"><span class="tpsl-modal-item__title">Stop
+                                            Loss&nbsp;&nbsp;USD</span></div>
+                                </div>
+                                <div class="by-select profit-select by-select--medium">
+                                    <div class="by-popover">
+                                        <div class="by-popover__el">
+                                            <div
+                                                class="by-input by-select__input by-input--readonly by-input--medium txt-align--right">
+                                                <div class="by-input__container"><span
+                                                        class="by-input__wrapper flex"><input class="by-input__inner"
+                                                            readonly="" type="text"
+                                                            value="Last Traded Price"></span><span
+                                                        class="by-input__right-icon"><span
+                                                            class="icon iconfont icon-xia f-8 by-select__icon brand-hover"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="oc__row">
+                                <div
+                                    class="by-input by-input-number oc__row-item flex1 mw-136 profit-input profit-input-wrap by-input--gc-1 by-input--outlined by-input--xxx-large">
+                                    <div class="by-input__container"><span class="by-input__wrapper flex"><input
+                                                class="by-input__inner" type="text" value="48000"></span><span
+                                            class="by-input__right-icon">
+                                            <div class="profit-input-icons"><span
+                                                    class="profit-input-icon-clear icon-clear iconfont"></span><span
+                                                    class="profit-input-icon">－</span><span
+                                                    class="profit-input-icon profit-input__border-left">＋</span></div>
+                                        </span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="by-switch flex full oc__row-bottom--12 by-switch--medium by-switch--contained by-switch--gc-4">
+                            <div class="by-switch__item">5%</div>
+                            <div class="by-switch__item">15%</div>
+                            <div class="by-switch__item">25%</div>
+                            <div class="by-switch__item">50%</div>
+                        </div>
+                        <p class="oc__row-desc oc__row-bottom--12 tpsl-modal__tips-desc">Last Traded Priceto 48,000.0
+                            will trigger market Stop Loss order; your expected loss will be 0.04502367
+                            BTC&nbsp;&nbsp;ROI:-6.09%</p>
+                    </div>
+                </div>
+                <div class="by-dialog__foot flex"><button
+                        class="by-button by-dialog__btn by-button--contained by-button--xx-large by-button--brand"
+                        type="button"><span class="by-button__content">Confirm</span></button><button
+                        class="by-button by-dialog__btn by-button--outlined by-button--xx-large by-button--secondary"
+                        type="button"><span class="by-button__content">Cancel</span></button></div>
+            </div>
+        </div>
+    </div>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+
+        <script language="js" type="text/javascript" src="init.js"></script>
+
+
+    </body>
+
+    </html>
+
+    <style>
+        .btc-dollar-wrapper {
+            font-size: 14px;
+            color: #101014;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        th.ant-table-cell:last-child:after {
+            content: "Winst/verlies BTC/USD";
+            position: absolute;
+            right: -140px;
+        }
+
+        .ant-table-tbody .negative {
+            color: rgb(247, 73, 123);
+        }
+
+        .ant-table-tbody .positive {
+            color: rgb(130, 199, 73);
+        }
+
+        .btc-to-dollar-box {
+            background-color: #ffb11a;
+            color: black;
+            font-weight: bold;
+            border-radius: 4px;
+            padding: 12px;
+            font-size: 16px;
+            margin-top: 16px;
+            line-height: 12px;
+        }
+    </style>
+
+    <script language="js" type="text/javascript" src="init.js"></script>
+    <script language="js" type="text/javascript" src="header.js"></script>
+
+
+</body>
+
+</html>
